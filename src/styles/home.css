@@ -1,0 +1,90 @@
+/* home.css */
+.home-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* Imagen de fondo */
+    background-image: url('../assets/background_home.jpg'); /* Ajusta la ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Overlay para mejorar la legibilidad del contenido */
+  .home-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
+    z-index: 1;
+  }
+  
+  /* Rectángulo central */
+  .center-rectangle {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    transition: all 0.3s ease;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Controles para ajustar dimensiones */
+  .dimension-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .control-group {
+    margin-bottom: 10px;
+  }
+  
+  .control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .control-group input {
+    width: 200px;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .center-rectangle {
+      width: 90% !important; /* Sobrescribe el ancho inline para móviles */
+      height: auto !important; /* Altura automática en móviles */
+      min-height: 300px;
+      padding: 20px;
+    }
+    
+    .dimension-controls {
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+    }
+    
+    .control-group input {
+      width: 150px;
+    }
+  }
+  

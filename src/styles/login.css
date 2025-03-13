@@ -1,0 +1,47 @@
+/* login.css */
+
+/* login.css */
+
+/* ----- AQUÍ ES DONDE DEBES COLOCAR TU IMAGEN DE FONDO ----- */
+.login-background {
+  /* Opción 1: Usando una imagen de fondo */
+  background-image: url('/src/assets/background_login.jpg'); /* REEMPLAZA ESTA RUTA con la ruta a tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Opción 2: Si prefieres usar un color sólido */
+  /* background-color: #f0f8ff; */
+  
+  /* Opción 3: O un gradiente */
+  /* background: linear-gradient(to right, #74ebd5, #acb6e5); */
+  
+  /* Asegúrate de que ocupe toda la pantalla */
+  min-height: 100vh;
+  width: 100%;
+}
+/* ------------------------------------------------------ */
+
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos adicionales para que se vea mejor */
+.login-card .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.login-card .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.login-card .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
