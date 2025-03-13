@@ -15,21 +15,7 @@ function CarouselImages() {
         const fetchImages = async () => {
             try {
                 setLoading(true);
-                
-                // Usando la API de Unsplash para obtener imágenes
-                // Nota: En producción, deberías usar tu propia clave API
-                const promises = categories.map(category => 
-                    fetch(`https://api.unsplash.com/photos/random?query=${category}&count=1&client_id=YOUR_UNSPLASH_ACCESS_KEY`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                );
-                
-                // Como alternativa, usaremos URLs de imágenes fijas para este ejemplo
-                // En un entorno real, descomenta el código anterior y usa tu clave API
+                setError(null);
                 const mockImages = [
                     {
                         id: "1",
